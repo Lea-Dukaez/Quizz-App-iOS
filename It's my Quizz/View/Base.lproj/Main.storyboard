@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ComicNeue-Bold.ttf">
+            <string>ComicNeue-Bold</string>
+        </array>
+        <array key="ComicNeue-Regular.ttf">
+            <string>ComicNeue-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="It_s_my_Quizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlt-XV-Mjy">
+                                <rect key="frame" x="15" y="54" width="78.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="ComicNeue-Regular" family="Comic Neue" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question goes here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htl-RL-Stp">
+                                <rect key="frame" x="15" y="194" width="384" height="34"/>
+                                <fontDescription key="fontDescription" name="ComicNeue-Bold" family="Comic Neue" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="81S-oh-LgR">
+                                <rect key="frame" x="15" y="470" width="384" height="292"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GU-On-nZP">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="136"/>
+                                        <fontDescription key="fontDescription" name="ComicNeue-Regular" family="Comic Neue" pointSize="26"/>
+                                        <state key="normal" title="True" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dpx-G7-mue"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCo-XQ-WKi">
+                                        <rect key="frame" x="0.0" y="156" width="384" height="136"/>
+                                        <fontDescription key="fontDescription" name="ComicNeue-Regular" family="Comic Neue" pointSize="26"/>
+                                        <state key="normal" title="False" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ic6-Qd-q4A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="T76-lC-lVV">
+                                <rect key="frame" x="0.0" y="746" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WsC-0i-w7Z"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qqQ-56-oxU">
+                                <rect key="frame" x="35" y="812" width="344" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="Zi1-Jq-UHb"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.46648782490000001" blue="0.6579276919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16470588235294117" green="0.2627450980392157" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="81S-oh-LgR" secondAttribute="bottom" constant="100" id="0Hj-Xf-DJA"/>
+                            <constraint firstItem="qqQ-56-oxU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="19l-RB-rgp"/>
+                            <constraint firstItem="81S-oh-LgR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="21d-4e-xQS"/>
+                            <constraint firstAttribute="trailing" secondItem="htl-RL-Stp" secondAttribute="trailing" constant="15" id="3O1-Zb-OM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="81S-oh-LgR" secondAttribute="trailing" constant="15" id="9sB-NJ-Be8"/>
+                            <constraint firstItem="vlt-XV-Mjy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Kll-wE-uNy"/>
+                            <constraint firstItem="vlt-XV-Mjy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="S8U-49-cDh"/>
+                            <constraint firstItem="htl-RL-Stp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="XiM-ro-z5g"/>
+                            <constraint firstAttribute="trailing" secondItem="T76-lC-lVV" secondAttribute="trailing" id="adt-vS-NFZ"/>
+                            <constraint firstItem="T76-lC-lVV" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="fIj-0T-uHW"/>
+                            <constraint firstItem="htl-RL-Stp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="llg-O4-uft"/>
+                            <constraint firstItem="T76-lC-lVV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mZC-a8-DoE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qqQ-56-oxU" secondAttribute="trailing" constant="15" id="qyg-ei-mfe"/>
+                            <constraint firstItem="qqQ-56-oxU" firstAttribute="top" secondItem="81S-oh-LgR" secondAttribute="bottom" constant="50" id="rb7-Da-SLX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="falseButton" destination="pCo-XQ-WKi" id="7zd-Ln-2zm"/>
+                        <outlet property="progressBar" destination="qqQ-56-oxU" id="zn0-P5-bmo"/>
+                        <outlet property="questionLabel" destination="htl-RL-Stp" id="Vcu-Ku-EU0"/>
+                        <outlet property="scoreLabel" destination="vlt-XV-Mjy" id="Psb-9Q-ZOZ"/>
+                        <outlet property="trueButton" destination="2GU-On-nZP" id="7ny-gS-tpq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background-Bubbles" width="352" height="102"/>
+        <image name="Rectangle" width="322" height="68"/>
+    </resources>
+</document>
